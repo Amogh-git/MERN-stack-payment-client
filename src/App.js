@@ -18,7 +18,7 @@ function App() {
 			order_id: data.id,
 			handler: async (response) => {
 				try {
-					const verifyUrl = "http://localhost:8080/api/payment/verify";
+					const verifyUrl = "http://https://razorpay-mern-server.herokuapp.com/api/payment/verify";
 					const { data } = await axios.post(verifyUrl, response);
 					console.log(data);
 				} catch (error) {
@@ -35,7 +35,7 @@ function App() {
 
 	const handlePayment = async () => {
 		try {
-			const orderUrl = "http://localhost:8080/api/payment/orders";
+			const orderUrl = "https://razorpay-mern-server.herokuapp.com/api/payment/orders";
 			const { data } = await axios.post(orderUrl, { amount: book.price });
 			console.log(data);
 			initPayment(data.data);
