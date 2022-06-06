@@ -51,7 +51,7 @@ function App() {
 		name: "The Fault In Our Stars",
 		author: "John Green",
 		img: "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
-		price: 250,
+		price: 10,
 	});
   return (
     <div className="App">
