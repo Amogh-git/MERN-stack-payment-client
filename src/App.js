@@ -35,10 +35,10 @@ function App() {
 
 	const handlePayment = async () => {
 		try {
-			const orderUrl = "https://razorpay-mern-server.herokuapp.com/api/payment/sample";
+			const orderUrl = "https://razorpay-mern-server.herokuapp.com/api/payment/sample/orders";
 			const { data } = await axios.post(orderUrl, { amount: book.price });
 			console.log(data);
-			// initPayment(data.data);
+			initPayment(data.data);
 		} catch (error) {
 			console.log(error);
 		}
